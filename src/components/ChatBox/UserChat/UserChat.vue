@@ -218,7 +218,7 @@ import { Back, Microphone, Camera, Monitor, Folder, Sunrise } from '@element-plu
 
 <script>
 export default {
-    name: 'ChatContainer',
+    name: 'UserChatContainer',
     data() {
         return {
             inputValue: ''
@@ -286,6 +286,7 @@ export default {
         flex: 1;
         background-color: var(--el-fill-color-light);
         border-top: 1px solid var(--el-border-color-extra-light);
+        border-bottom: 1px solid var(--el-border-color-extra-light);
         padding: 0;
         padding-left: 20px;
 
@@ -302,6 +303,7 @@ export default {
                 color: var(--el-color-info);
                 user-select: none;
             }
+
             .content-message-time.show {
                 display: flex;
             }
@@ -356,7 +358,7 @@ export default {
     }
 
     .chat-input {
-        background-color: var(--el-fill-color-light);
+        // background-color: var(--el-fill-color-light);
         height: 70px;
         padding-top: 10px;
         padding-bottom: 10px;
