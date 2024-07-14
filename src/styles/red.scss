@@ -1,0 +1,11 @@
+@use "sass:map";
+@use "element-plus/theme-chalk/src/common/var" as var;
+
+$_colors: map.get(var.$colors, "error");
+
+html[data-theme="red"] {
+    @each $name, $color in $_colors {
+        --color-#{$name}: #{$color};
+    }
+}
+ 

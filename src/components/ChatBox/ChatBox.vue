@@ -30,12 +30,12 @@ export default {
 .chatbox {
     width: 1400px;
     height: 700px;
-    box-shadow: 0 0 5px #ddd;
+    box-shadow: 0 0 5px var(--el-color-info-light-3);
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    // flex-direction: row;
+    border-radius: 5px;
 }
 </style>

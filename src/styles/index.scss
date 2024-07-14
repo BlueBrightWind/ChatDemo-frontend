@@ -1,0 +1,16 @@
+@use "~/styles/blue" as *;
+@use "~/styles/green" as *;
+@use "~/styles/orange" as *;
+@use "~/styles/red" as *;
+@use "~/styles/grey" as *;
+
+@use "sass:map";
+@use "element-plus/theme-chalk/src/common/var" as var;
+
+$_colors: map.get(var.$colors, "primary");
+
+:root {
+    @each $name, $color in $_colors {
+        --color-#{$name}: #{$color};
+    }
+}

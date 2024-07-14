@@ -7,7 +7,7 @@
                 </el-icon>
             </el-button>
             <div class="friend-avatar">
-                <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小明</el-avatar>
+                <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar>
             </div>
             <div class="friend-info">
                 <div class="name-content">小明</div>
@@ -15,157 +15,166 @@
             </div>
         </el-header>
         <el-main class="chat-content">
-            <!-- 消息体开始 -->
-            <el-container style="width: 100%;">
-                <el-header class="content-message-time">2024/07/10 14:53</el-header>
-                <el-main class="content-item">
-                    <el-container style="width: 100%;">
-                        <el-aside class="content-item-avatar">
-                            <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小明</el-avatar>
-                        </el-aside>
-                        <el-main class="content-item-message">
-                            <div class="message-item">
-                                哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            </div>
-                        </el-main>
-                        <el-aside class="content-item-avatar">
-                            <!-- <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小红</el-avatar> -->
-                        </el-aside>
-                    </el-container>
-                </el-main>
-            </el-container>
-            <!-- 消息体结束 -->
-            <!-- 消息体开始 -->
-            <el-container style="width: 100%;">
-                <el-header class="content-message-time">2024/07/10 14:53</el-header>
-                <el-main class="content-item">
-                    <el-container style="width: 100%;">
-                        <el-aside class="content-item-avatar">
-                            <!-- <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小明</el-avatar> -->
-                        </el-aside>
-                        <el-main class="content-item-message message-right">
-                            <div class="message-item">
-                                哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            </div>
-                        </el-main>
-                        <el-aside class="content-item-avatar">
-                            <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小红</el-avatar>
-                        </el-aside>
-                    </el-container>
-                </el-main>
-            </el-container>
-            <!-- 消息体结束 -->
-
-            <!-- 测试开始 -->
-            <el-container style="width: 100%;">
-                <el-header class="content-message-time">2024/07/10 14:53</el-header>
-                <el-main class="content-item">
-                    <el-container style="width: 100%;">
-                        <el-aside class="content-item-avatar">
-                            <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小明</el-avatar>
-                        </el-aside>
-                        <el-main class="content-item-message">
-                            <div class="message-item">
-                                哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            </div>
-                        </el-main>
-                        <el-aside class="content-item-avatar">
-                            <!-- <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小红</el-avatar> -->
-                        </el-aside>
-                    </el-container>
-                </el-main>
-            </el-container>
-            <el-container style="width: 100%;">
-                <el-header class="content-message-time">2024/07/10 14:53</el-header>
-                <el-main class="content-item">
-                    <el-container style="width: 100%;">
-                        <el-aside class="content-item-avatar">
-                            <!-- <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小明</el-avatar> -->
-                        </el-aside>
-                        <el-main class="content-item-message message-right">
-                            <div class="message-item">
-                                哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            </div>
-                        </el-main>
-                        <el-aside class="content-item-avatar">
-                            <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小红</el-avatar>
-                        </el-aside>
-                    </el-container>
-                </el-main>
-            </el-container>
-            <el-container style="width: 100%;">
-                <el-header class="content-message-time">2024/07/10 14:53</el-header>
-                <el-main class="content-item">
-                    <el-container style="width: 100%;">
-                        <el-aside class="content-item-avatar">
-                            <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小明</el-avatar>
-                        </el-aside>
-                        <el-main class="content-item-message">
-                            <div class="message-item">
-                                哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            </div>
-                        </el-main>
-                        <el-aside class="content-item-avatar">
-                            <!-- <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小红</el-avatar> -->
-                        </el-aside>
-                    </el-container>
-                </el-main>
-            </el-container>
-            <el-container style="width: 100%;">
-                <el-header class="content-message-time">2024/07/10 14:53</el-header>
-                <el-main class="content-item">
-                    <el-container style="width: 100%;">
-                        <el-aside class="content-item-avatar">
-                            <!-- <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小明</el-avatar> -->
-                        </el-aside>
-                        <el-main class="content-item-message message-right">
-                            <div class="message-item">
-                                哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            </div>
-                        </el-main>
-                        <el-aside class="content-item-avatar">
-                            <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小红</el-avatar>
-                        </el-aside>
-                    </el-container>
-                </el-main>
-            </el-container>
-            <el-container style="width: 100%;">
-                <el-header class="content-message-time">2024/07/10 14:53</el-header>
-                <el-main class="content-item">
-                    <el-container style="width: 100%;">
-                        <el-aside class="content-item-avatar">
-                            <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小明</el-avatar>
-                        </el-aside>
-                        <el-main class="content-item-message">
-                            <div class="message-item">
-                                哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            </div>
-                        </el-main>
-                        <el-aside class="content-item-avatar">
-                            <!-- <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小红</el-avatar> -->
-                        </el-aside>
-                    </el-container>
-                </el-main>
-            </el-container>
-            <el-container style="width: 100%;">
-                <el-header class="content-message-time">2024/07/10 14:53</el-header>
-                <el-main class="content-item">
-                    <el-container style="width: 100%;">
-                        <el-aside class="content-item-avatar">
-                            <!-- <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小明</el-avatar> -->
-                        </el-aside>
-                        <el-main class="content-item-message message-right">
-                            <div class="message-item">
-                                哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            </div>
-                        </el-main>
-                        <el-aside class="content-item-avatar">
-                            <el-avatar style="width: 75%; height: 75%; background-color: #1976d2;">小红</el-avatar>
-                        </el-aside>
-                    </el-container>
-                </el-main>
-            </el-container>
-            <!-- 测试结束 -->
+            <el-scrollbar class="chat-content-inner">
+                <!-- 消息体开始 -->
+                <el-container style="width: 100%;">
+                    <el-header class="content-message-time show">2024/07/10 14:53</el-header>
+                    <el-main class="content-item">
+                        <el-container style="width: 100%;">
+                            <el-aside class="content-item-avatar">
+                                <el-avatar
+                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar>
+                            </el-aside>
+                            <el-main class="content-item-message">
+                                <div class="message-item">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+                            </el-main>
+                            <el-aside class="content-item-avatar">
+                                <!-- <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小红</el-avatar> -->
+                            </el-aside>
+                        </el-container>
+                    </el-main>
+                </el-container>
+                <!-- 消息体结束 -->
+                <!-- 消息体开始 -->
+                <el-container style="width: 100%;">
+                    <el-header class="content-message-time">2024/07/10 14:53</el-header>
+                    <el-main class="content-item">
+                        <el-container style="width: 100%;">
+                            <el-aside class="content-item-avatar">
+                                <!-- <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar> -->
+                            </el-aside>
+                            <el-main class="content-item-message message-right">
+                                <div class="message-item">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+                            </el-main>
+                            <el-aside class="content-item-avatar">
+                                <el-avatar
+                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小红</el-avatar>
+                            </el-aside>
+                        </el-container>
+                    </el-main>
+                </el-container>
+                <!-- 消息体结束 -->
+                <!-- 测试开始 -->
+                <el-container style="width: 100%;">
+                    <el-header class="content-message-time">2024/07/10 14:53</el-header>
+                    <el-main class="content-item">
+                        <el-container style="width: 100%;">
+                            <el-aside class="content-item-avatar">
+                                <el-avatar
+                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar>
+                            </el-aside>
+                            <el-main class="content-item-message">
+                                <div class="message-item">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+                            </el-main>
+                            <el-aside class="content-item-avatar">
+                                <!-- <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小红</el-avatar> -->
+                            </el-aside>
+                        </el-container>
+                    </el-main>
+                </el-container>
+                <el-container style="width: 100%;">
+                    <el-header class="content-message-time show">2024/07/10 14:53</el-header>
+                    <el-main class="content-item">
+                        <el-container style="width: 100%;">
+                            <el-aside class="content-item-avatar">
+                                <!-- <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar> -->
+                            </el-aside>
+                            <el-main class="content-item-message message-right">
+                                <div class="message-item">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+                            </el-main>
+                            <el-aside class="content-item-avatar">
+                                <el-avatar
+                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小红</el-avatar>
+                            </el-aside>
+                        </el-container>
+                    </el-main>
+                </el-container>
+                <el-container style="width: 100%;">
+                    <el-header class="content-message-time">2024/07/10 14:53</el-header>
+                    <el-main class="content-item">
+                        <el-container style="width: 100%;">
+                            <el-aside class="content-item-avatar">
+                                <el-avatar
+                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar>
+                            </el-aside>
+                            <el-main class="content-item-message">
+                                <div class="message-item">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+                            </el-main>
+                            <el-aside class="content-item-avatar">
+                                <!-- <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小红</el-avatar> -->
+                            </el-aside>
+                        </el-container>
+                    </el-main>
+                </el-container>
+                <el-container style="width: 100%;">
+                    <el-header class="content-message-time">2024/07/10 14:53</el-header>
+                    <el-main class="content-item">
+                        <el-container style="width: 100%;">
+                            <el-aside class="content-item-avatar">
+                                <!-- <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar> -->
+                            </el-aside>
+                            <el-main class="content-item-message message-right">
+                                <div class="message-item">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+                            </el-main>
+                            <el-aside class="content-item-avatar">
+                                <el-avatar
+                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小红</el-avatar>
+                            </el-aside>
+                        </el-container>
+                    </el-main>
+                </el-container>
+                <el-container style="width: 100%;">
+                    <el-header class="content-message-time">2024/07/10 14:53</el-header>
+                    <el-main class="content-item">
+                        <el-container style="width: 100%;">
+                            <el-aside class="content-item-avatar">
+                                <el-avatar
+                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar>
+                            </el-aside>
+                            <el-main class="content-item-message">
+                                <div class="message-item">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+                            </el-main>
+                            <el-aside class="content-item-avatar">
+                                <!-- <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小红</el-avatar> -->
+                            </el-aside>
+                        </el-container>
+                    </el-main>
+                </el-container>
+                <el-container style="width: 100%;">
+                    <el-header class="content-message-time">2024/07/10 14:53</el-header>
+                    <el-main class="content-item">
+                        <el-container style="width: 100%;">
+                            <el-aside class="content-item-avatar">
+                                <!-- <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar> -->
+                            </el-aside>
+                            <el-main class="content-item-message message-right">
+                                <div class="message-item">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+                            </el-main>
+                            <el-aside class="content-item-avatar">
+                                <el-avatar
+                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小红</el-avatar>
+                            </el-aside>
+                        </el-container>
+                    </el-main>
+                </el-container>
+                <!-- 测试结束 -->
+            </el-scrollbar>
         </el-main>
         <el-footer class="chat-input">
             <div class="chat-input-box">
@@ -243,7 +252,7 @@ export default {
         }
 
         .return-last:hover {
-            background-color: #f0f0f0;
+            background-color: var(--el-fill-color-light);
             color: inherit;
         }
 
@@ -267,77 +276,87 @@ export default {
             }
 
             .desc-content {
-                font-size: 14px;
-                color: #666;
+                font-size: 12px;
+                color: var(--el-color-info);
             }
         }
     }
 
     .chat-content {
         flex: 1;
-        background-color: #f8f9fb;
-        border-top: 1px solid #e2e3e5;
+        background-color: var(--el-fill-color-light);
+        border-top: 1px solid var(--el-border-color-extra-light);
+        padding: 0;
+        padding-left: 20px;
 
-        .content-message-time {
-            width: 100%;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 12px;
-            color: #666;
-        }
+        .chat-content-inner {
+            padding-right: 20px;
 
-        .content-item {
-            width: 100%;
-            padding: 5px;
-
-            .content-item-avatar {
-                width: 40px;
-                height: 40px;
-                display: flex;
+            .content-message-time {
+                display: none;
+                width: 100%;
+                height: 30px;
                 justify-content: center;
                 align-items: center;
-
-                :deep(.el-avatar) {
-                    font-size: 10px;
-                }
+                font-size: 12px;
+                color: var(--el-color-info);
+                user-select: none;
+            }
+            .content-message-time.show {
+                display: flex;
             }
 
-            .content-item-message {
-                display: flex;
-                justify-content: left;
-                align-items: start;
-                padding-top: 2px;
-                padding-bottom: 8px;
-                padding-left: 10px;
-                padding-right: 10px;
+            .content-item {
+                width: 100%;
+                padding: 5px;
 
-                .message-item {
-                    padding: 5px;
+                .content-item-avatar {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    :deep(.el-avatar) {
+                        font-size: 10px;
+                    }
+                }
+
+                .content-item-message {
+                    display: flex;
+                    justify-content: left;
+                    align-items: start;
+                    padding-top: 0;
+                    padding-bottom: 0;
                     padding-left: 10px;
                     padding-right: 10px;
-                    border-radius: 5px;
-                    line-height: 26px;
-                    font-size: 14px;
-                    text-align: left;
-                    background-color: #fff;
-                    box-shadow: 0 1px 3px #b9b9ba;
+
+                    .message-item {
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        border-radius: 5px;
+                        line-height: 30px;
+                        font-size: 14px;
+                        text-align: left;
+                        background-color: var(--el-fill-color-lighter);
+                    }
                 }
-            }
 
-            .message-left {
-                justify-content: left;
-            }
+                .content-item-message.message-left {
+                    justify-content: left;
+                }
 
-            .message-right {
-                justify-content: right;
+                .content-item-message.message-right {
+                    justify-content: right;
+                }
             }
         }
     }
 
     .chat-input {
-        background-color: #f8f9fb;
+        background-color: var(--el-fill-color-light);
         height: 70px;
         padding-top: 10px;
         padding-bottom: 10px;
