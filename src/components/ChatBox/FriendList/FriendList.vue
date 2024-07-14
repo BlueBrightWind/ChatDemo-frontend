@@ -3,10 +3,28 @@
         <el-header class="search-container">
             <el-container style="width: 100%; height: 100%;">
                 <el-aside class="search-input">
-                    <el-input v-model="input1" placeholder="搜索" :prefix-icon="Search" />
+                    <el-input v-model="inputValue" placeholder="搜索" :prefix-icon="Search" />
                 </el-aside>
                 <el-main class="search-add-friend">
                     <CirclePlusFilled />
+                    <div class="add-friend-list">
+                        <div class="list-item">
+                            <div class="list-item-content">
+                                <el-icon class="list-item-icon">
+                                    <ChatDotSquare />
+                                </el-icon>
+                                发起群聊
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-content">
+                                <el-icon class="list-item-icon">
+                                    <User />
+                                </el-icon>
+                                添加好友/群
+                            </div>
+                        </div>
+                    </div>
                 </el-main>
             </el-container>
         </el-header>
@@ -197,12 +215,17 @@
 
 <script setup>
 import { Search } from '@element-plus/icons-vue'
-import { CirclePlusFilled } from '@element-plus/icons-vue'
+import { CirclePlusFilled, User, ChatDotSquare } from '@element-plus/icons-vue'
 </script>
 
 <script>
 export default {
     name: 'FriendList',
+    data() {
+        return {
+            inputValue: ''
+        }
+    }
 
 }
 </script>
@@ -242,13 +265,72 @@ export default {
             justify-content: right;
             align-items: center;
             padding: 0;
+            position: relative;
+            overflow: visible;
+
+
+            :deep(svg) {
+                width: 70%;
+                height: 70%;
+                color: var(--color-base);
+            }
+
+            :deep(svg:hover) {
+                color: var(--color-light-2)
+            }
+
+            .add-friend-list {
+                width: 120px;
+                position: absolute;
+                left: 10px;
+                top: calc(100% - 15px);
+                z-index: 2;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--el-bg-color);
+                user-select: none;
+                box-shadow: 0 0 2px var(--el-border-color-light);
+
+                .list-item {
+                    padding: 5px;
+                    display: flex;
+
+                    .list-item-content {
+                        width: 100%;
+                        height: 20px;
+                        padding: 5px;
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        font-size: 12px;
+                        border-radius: 5px;
+                        background-color: var(--el-bg-color);
+
+                        .list-item-icon {
+                            width: 20px;
+                            height: 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 10px;
+
+                            :deep(svg) {
+                                width: 100%;
+                                height: 100%;
+                                color: var(--el-text-color-primary);
+                            }
+                        }
+                    }
+
+                    .list-item-content:hover {
+                        background-color: var(--el-color-info-light-9);
+                    }
+                }
+
+            }
         }
 
-        .search-add-friend :deep(svg) {
-            width: 70%;
-            height: 70%;
-            color: var(--color-base);
-        }
     }
 
     .friendlist-container {

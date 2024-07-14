@@ -1,7 +1,7 @@
 <template>
     <div class="chatbox">
         <el-container>
-            <el-aside>
+            <el-aside style="overflow: visible;">
                 <FriendList />
             </el-aside>
             <el-main style="padding: 0;">
