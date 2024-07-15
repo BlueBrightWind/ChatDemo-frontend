@@ -284,7 +284,7 @@ export default {
 
     .chat-content {
         flex: 1;
-        background-color: var(--el-fill-color-light);
+        background-color: var(--el-bg-color-page);
         border-top: 1px solid var(--el-border-color-extra-light);
         border-bottom: 1px solid var(--el-border-color-extra-light);
         padding: 0;

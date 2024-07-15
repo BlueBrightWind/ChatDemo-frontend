@@ -1,13 +1,14 @@
 <template>
     <div class="chatbox">
-        <el-container>
+        <!-- <el-container>
             <el-aside style="overflow: visible;">
                 <FriendList />
             </el-aside>
             <el-main style="padding: 0;">
                 <ChatContainer />
             </el-main>
-        </el-container>
+        </el-container> -->
+        <AddFriend />
 
 
     </div>
@@ -15,13 +16,15 @@
 
 <script>
 import FriendList from "./FriendList/FriendList.vue";
-import ChatContainer from "./UserChat/UserChat.vue";
+import ChatContainer from "./UserChat/GroupChat.vue";
+import AddFriend from "./AddFriend/AddFriend.vue";
 
 export default {
     name: 'ChatBox',
     components: {
         FriendList,
-        ChatContainer
+        ChatContainer,
+        AddFriend
     }
 }
 </script>

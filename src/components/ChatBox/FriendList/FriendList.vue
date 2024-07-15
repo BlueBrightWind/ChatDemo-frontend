@@ -268,7 +268,6 @@ export default {
             position: relative;
             overflow: visible;
 
-
             :deep(svg) {
                 width: 70%;
                 height: 70%;
