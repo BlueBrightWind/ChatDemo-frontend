@@ -5,7 +5,7 @@
                 <el-input v-model="inputValue" placeholder="搜索" :prefix-icon="Search" />
             </el-header>
             <el-main class="friend-search-result">
-                <el-tabs v-model="activeName" @tab-click="handleClick" style="width: 100%; height: 100%;">
+                <el-tabs v-model="activeName" @tab-click="" style="width: 100%; height: 100%;">
                     <el-tab-pane label="全部" name="全部" style="width: 100%; height: 100%;">
                         <el-scrollbar class="friend-search-result-inner">
                             <div class="friend-type-results">
@@ -197,7 +197,7 @@
                                     <!-- 测试结束 -->
                                 </div>
                             </div>
-                            <div class="friend-type-results">
+                            <div class="friend-type-results" style="border-top: 1px solid var(--el-border-color-light)">
                                 <div class="friend-type">群聊</div>
                                 <div class="friend-list">
                                     <!-- 测试开始 -->
@@ -386,8 +386,388 @@
                             </div>
                         </el-scrollbar>
                     </el-tab-pane>
-                    <el-tab-pane label="用户" name="用户">Config</el-tab-pane>
-                    <el-tab-pane label="群聊" name="群聊">Role</el-tab-pane>
+                    <el-tab-pane label="用户" name="用户" style="width: 100%; height: 100%;">
+                        <el-scrollbar class="friend-search-result-inner">
+                            <div class="friend-type-results">
+                                <div class="friend-list">
+                                    <!-- 好友开始 -->
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <!-- 好友结束 -->
+                                    <!-- 测试开始 -->
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    小明
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    个性签名
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <!-- 测试结束 -->
+                                </div>
+                            </div>
+                        </el-scrollbar>
+                    </el-tab-pane>
+                    <el-tab-pane label="群聊" name="群聊" style="width: 100%; height: 100%;">
+                        <el-scrollbar class="friend-search-result-inner">
+                            <div class="friend-type-results">
+                                <div class="friend-list">
+                                    <!-- 测试开始 -->
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <div class="friend">
+                                        <el-avatar class="friend-avatar">小明</el-avatar>
+                                        <div class="friend-info">
+                                            <div class="friend-name">
+                                                <div class="name-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                            <div class="friend-desc">
+                                                <div class="desc-item">
+                                                    原神启动
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-button">
+                                            <el-button class="button-item">添加</el-button>
+                                        </div>
+                                    </div>
+                                    <!-- 测试结束 -->
+                                </div>
+                            </div>
+                        </el-scrollbar>
+                    </el-tab-pane>
                 </el-tabs>
             </el-main>
         </el-container>
@@ -396,12 +776,19 @@
 </template>
 
 <script setup>
-import { Search } from '@element-plus/icons-vue'
+import { ref } from 'vue';
+import { Search } from '@element-plus/icons-vue';
+const activeName = ref('全部');
 </script>
 
 <script>
 export default {
     name: 'AddFriend',
+    data() {
+        return {
+            inputValue: ''
+        }
+    },
 }
 </script>
 
