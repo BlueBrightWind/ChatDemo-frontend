@@ -802,6 +802,7 @@ export default {
     .add-friend-search {
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
@@ -819,6 +820,11 @@ export default {
             padding-left: 20px;
             padding-right: 20px;
         }
+
+        :deep(.el-tabs__nav-wrap::after) {
+            height: 0;
+        }
+
 
         :deep(.el-tabs__content) {
             padding-left: 20px;

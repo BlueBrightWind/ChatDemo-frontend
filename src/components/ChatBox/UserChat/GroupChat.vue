@@ -1,11 +1,7 @@
 <template>
     <el-container class="chat-container">
         <el-header class="chat-title">
-            <el-button class="return-last">
-                <el-icon>
-                    <Back />
-                </el-icon>
-            </el-button>
+            <el-button class="return-last" :icon="Back" />
             <div class="friend-avatar">
                 <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar>
             </div>
@@ -321,19 +317,13 @@ export default {
         user-select: none;
 
         .return-last {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15px;
             outline: none;
             border: none;
-        }
-
-        .return-last:hover {
-            background-color: var(--el-fill-color-light);
-            color: inherit;
+            background-color: transparent;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
         }
 
         .friend-avatar {
