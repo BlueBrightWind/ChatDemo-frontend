@@ -3,11 +3,11 @@
         <el-header class="search-container">
             <el-container style="width: 100%; height: 100%;">
                 <el-aside class="search-input">
-                    <el-input v-model="inputValue" placeholder="搜索" :prefix-icon="Search" />
+                    <el-input v-model="filterInput" placeholder="搜索" :prefix-icon="Search" />
                 </el-aside>
-                <el-main class="search-add-message">
-                    <CirclePlusFilled />
-                    <div class="add-message-list">
+                <el-main class="search-add-friend">
+                    <CirclePlusFilled @click.stop="openAddList" />
+                    <div v-show="controlInfo.showAddList" class="add-list">
                         <div class="list-item">
                             <div class="list-item-content">
                                 <el-icon class="list-item-icon">
@@ -30,174 +30,25 @@
         </el-header>
         <el-main class="messagelist-container">
             <el-scrollbar class="messagelist-container-inner">
-                <!-- 好友信息开始 -->
-                <div class="message selected">
+                <div v-for="message, index in filterlist" class="message"
+                    :class="{ selected: controlInfo.selectId == message.key }" @click="handleSelect(message.key)">
                     <div class="message-avatar">
-                        <el-avatar
-                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar>
+                        <el-avatar style="width: 75%; height: 75%; background-color: var(--color-dark-2);">{{
+                            message.name.substring(message.name.length - 2) }}</el-avatar>
                     </div>
                     <div class="message-info">
                         <div class="message-name">
-                            <div class="name-content">小明</div>
+                            <div class="name-content">{{ message.name }}</div>
                         </div>
                         <div class="message-latest-message">
-                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                            <span class="message-latest-message-item">{{ message.latestMessage }}</span>
                         </div>
                     </div>
                     <div class="message-time">
-                        <span>Today</span>
-                        <span>17:24</span>
+                        <span>{{ timestrapToDate(message.time) }}</span>
+                        <span>{{ timestrapToTime(message.time) }}</span>
                     </div>
                 </div>
-                <!-- 好友信息结束 -->
-                <!-- 好友信息开始 -->
-                <div class="message">
-                    <div class="message-avatar">
-                        <el-avatar
-                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                    </div>
-                    <div class="message-info">
-                        <div class="message-name">
-                            <div class="name-content">小笨</div>
-                        </div>
-                        <div class="message-latest-message">
-                            <span class="message-latest-message-item">优先处理日构建事务</span>
-                        </div>
-                    </div>
-                    <div class="message-time">
-                        <span>2020-12-24</span>
-                        <span>14:32</span>
-                    </div>
-                </div>
-                <!-- 好友信息结束 -->
-                <!-- 测试开始 -->
-                <div class="message">
-                    <div class="message-avatar">
-                        <el-avatar
-                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                    </div>
-                    <div class="message-info">
-                        <div class="message-name">
-                            <div class="name-content">小笨</div>
-                        </div>
-                        <div class="message-latest-message">
-                            <span class="message-latest-message-item">优先处理日构建事务</span>
-                        </div>
-                    </div>
-                    <div class="message-time">
-                        <span>2020-12-24</span>
-                        <span>14:32</span>
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="message-avatar">
-                        <el-avatar
-                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                    </div>
-                    <div class="message-info">
-                        <div class="message-name">
-                            <div class="name-content">小笨</div>
-                        </div>
-                        <div class="message-latest-message">
-                            <span class="message-latest-message-item">优先处理日构建事务</span>
-                        </div>
-                    </div>
-                    <div class="message-time">
-                        <span>2020-12-24</span>
-                        <span>14:32</span>
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="message-avatar">
-                        <el-avatar
-                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                    </div>
-                    <div class="message-info">
-                        <div class="message-name">
-                            <div class="name-content">小笨</div>
-                        </div>
-                        <div class="message-latest-message">
-                            <span class="message-latest-message-item">优先处理日构建事务</span>
-                        </div>
-                    </div>
-                    <div class="message-time">
-                        <span>2020-12-24</span>
-                        <span>14:32</span>
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="message-avatar">
-                        <el-avatar
-                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                    </div>
-                    <div class="message-info">
-                        <div class="message-name">
-                            <div class="name-content">小笨</div>
-                        </div>
-                        <div class="message-latest-message">
-                            <span class="message-latest-message-item">优先处理日构建事务</span>
-                        </div>
-                    </div>
-                    <div class="message-time">
-                        <span>2020-12-24</span>
-                        <span>14:32</span>
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="message-avatar">
-                        <el-avatar
-                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                    </div>
-                    <div class="message-info">
-                        <div class="message-name">
-                            <div class="name-content">小笨</div>
-                        </div>
-                        <div class="message-latest-message">
-                            <span class="message-latest-message-item">优先处理日构建事务</span>
-                        </div>
-                    </div>
-                    <div class="message-time">
-                        <span>2020-12-24</span>
-                        <span>14:32</span>
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="message-avatar">
-                        <el-avatar
-                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                    </div>
-                    <div class="message-info">
-                        <div class="message-name">
-                            <div class="name-content">小笨</div>
-                        </div>
-                        <div class="message-latest-message">
-                            <span class="message-latest-message-item">优先处理日构建事务</span>
-                        </div>
-                    </div>
-                    <div class="message-time">
-                        <span>2020-12-24</span>
-                        <span>14:32</span>
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="message-avatar">
-                        <el-avatar
-                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                    </div>
-                    <div class="message-info">
-                        <div class="message-name">
-                            <div class="name-content">小笨</div>
-                        </div>
-                        <div class="message-latest-message">
-                            <span class="message-latest-message-item">优先处理日构建事务</span>
-                        </div>
-                    </div>
-                    <div class="message-time">
-                        <span>2020-12-24</span>
-                        <span>14:32</span>
-                    </div>
-                </div>
-                <!-- 测试结束 -->
             </el-scrollbar>
 
         </el-main>
@@ -207,6 +58,16 @@
 <script setup>
 import { Search } from '@element-plus/icons-vue'
 import { CirclePlusFilled, User, ChatDotSquare } from '@element-plus/icons-vue'
+import { onMounted, getCurrentInstance } from 'vue'
+
+const ins = getCurrentInstance();
+
+onMounted(() => {
+    // 点击任意位置关闭添加好友列表
+    document.addEventListener('click', () => {
+        ins.data.controlInfo.showAddList = false;
+    })
+})
 </script>
 
 <script>
@@ -214,10 +75,73 @@ export default {
     name: 'messageList',
     data() {
         return {
-            inputValue: ''
+            filterInput: '',
+            controlInfo: {
+                showAddList: false,
+                selectId: 0
+            },
+            messagelist: [
+                {
+                    key: 1,
+                    id: 1,
+                    type: 'user',
+                    name: '小明',
+                    latestMessage: '优先处理日构建事务',
+                    time: 1721219858
+                },
+                {
+                    key: 2,
+                    id: 2,
+                    type: 'user',
+                    name: '小笨',
+                    latestMessage: '优先处理日构建事务',
+                    time: 1721219858
+                },
+                {
+                    key: 3,
+                    id: 1,
+                    type: 'group',
+                    name: '小明',
+                    latestMessage: '优先处理日构建事务',
+                    time: 1721219858
+                },
+                {
+                    key: 4,
+                    id: 2,
+                    type: 'group',
+                    name: '小笨',
+                    latestMessage: '优先处理日构建事务',
+                    time: 1721219858
+                }
+            ]
         }
-    }
-
+    },
+    computed: {
+        filterlist() {
+            return this.messagelist.filter(item => item.name.includes(this.filterInput))
+        }
+    },
+    methods: {
+        timestrapToDate(timestrap) {
+            let date = new Date(timestrap * 1000);
+            let Y = date.getFullYear() + '-';
+            let M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            let D = date.getDate();
+            return Y + M + D;
+        },
+        timestrapToTime(timestrap) {
+            let date = new Date(timestrap * 1000);
+            let h = date.getHours() + ':';
+            let m = date.getMinutes();
+            return h + m;
+        },
+        handleSelect(key) {
+            this.controlInfo.selectId = key
+        },
+        openAddList() {
+            this.controlInfo.showAddList = true;
+        }
+    },
 }
 </script>
 
@@ -250,7 +174,7 @@ export default {
             height: 27px;
         }
 
-        .search-add-message {
+        .search-add-friend {
             width: 15%;
             height: 100%;
             display: flex;
@@ -270,7 +194,7 @@ export default {
                 color: var(--color-light-2)
             }
 
-            .add-message-list {
+            .add-list {
                 width: 120px;
                 position: absolute;
                 left: 10px;

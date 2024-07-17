@@ -6,8 +6,8 @@
                     <el-input v-model="filterInput" placeholder="搜索" :prefix-icon="Search" />
                 </el-aside>
                 <el-main class="search-add-friend">
-                    <CirclePlusFilled />
-                    <div class="add-friend-list">
+                    <CirclePlusFilled @click.stop="openAddList" />
+                    <div v-show="controlInfo.showAddList" class="add-friend-list">
                         <div class="list-item">
                             <div class="list-item-content">
                                 <el-icon class="list-item-icon">
@@ -31,54 +31,13 @@
         <el-main class="friendlist-container">
             <el-scrollbar class="friendlist-container-inner">
                 <div class="list-container" :class="{ show: controlInfo.user.show }">
-                    <div class="list-title" @click.stop="handleToggleUserList">
+                    <div class="list-title" @click="handleToggleUserList">
                         <el-icon class="list-title-icon">
                             <ArrowRight />
                         </el-icon>
                         <div class="list-title-content">我的好友</div>
                     </div>
                     <div v-show="controlInfo.user.show" class="list-content">
-                        <!-- 示例开始 -->
-                        <!-- <div class="user selected online">
-                            <div class="user-avatar">
-                                <el-avatar
-                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                            </div>
-                            <div class="user-info">
-                                <div class="user-name">
-                                    <div class="online-status"></div>
-                                    <div class="name-content">
-                                        <div class="name-content-item">
-                                            小笨
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="user-desc">
-                                    <span class="user-desc-item">优先处理日构建事务</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="user offline">
-                            <div class="user-avatar">
-                                <el-avatar
-                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                            </div>
-                            <div class="user-info">
-                                <div class="user-name">
-                                    <div class="online-status"></div>
-                                    <div class="name-content">
-                                        <div class="name-content-item">
-                                            小笨
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="user-desc">
-                                    <span class="user-desc-item">优先处理日构建事务</span>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- 示例结束 -->
-                        <!-- 测试开始 -->
                         <div v-for="user, index in userlist" class="user"
                             :class="{ online: user.online, offline: !user.online, selected: controlInfo.selectId == user.key }"
                             @click="handleSelect(user.key)">
@@ -100,46 +59,16 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 测试结束 -->
                     </div>
                 </div>
                 <div class="list-container" :class="{ show: controlInfo.group.show }">
-                    <div class="list-title" @click.stop="handleToggleGroupList">
+                    <div class="list-title" @click="handleToggleGroupList">
                         <el-icon class="list-title-icon">
                             <ArrowRight />
                         </el-icon>
                         <div class="list-title-content">我的群聊</div>
                     </div>
                     <div v-show="controlInfo.group.show" class="list-content">
-                        <!-- 示例开始 -->
-                        <!-- <div class="group selected">
-                            <div class="group-avatar">
-                                <el-avatar
-                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar>
-                            </div>
-                            <div class="group-info">
-                                <div class="group-name">
-                                    <div class="name-content">
-                                        <div class="name-content-item">小明</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="group">
-                            <div class="group-avatar">
-                                <el-avatar
-                                    style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
-                            </div>
-                            <div class="group-info">
-                                <div class="group-name">
-                                    <div class="name-content">
-                                        <div class="name-content-item">小笨</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- 示例结束 -->
-                        <!-- 测试开始 -->
                         <div v-for="group, index in grouplist" class="group"
                             :class="{ selected: controlInfo.selectId == group.key }" @click="handleSelect(group.key)">
                             <div class="group-avatar">
@@ -154,7 +83,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 测试结束 -->
                     </div>
                 </div>
             </el-scrollbar>
@@ -165,6 +93,17 @@
 <script setup>
 import { Search, ArrowRight } from '@element-plus/icons-vue'
 import { CirclePlusFilled, User, ChatDotSquare } from '@element-plus/icons-vue'
+import { onMounted, getCurrentInstance } from 'vue'
+
+const ins = getCurrentInstance();
+
+onMounted(() => {
+    // 点击任意位置关闭添加好友列表
+    document.addEventListener('click', () => {
+        ins.data.controlInfo.showAddList = false;
+    })
+})
+
 </script>
 
 <script>
@@ -174,6 +113,7 @@ export default {
         return {
             filterInput: '',
             controlInfo: {
+                showAddList: false,
                 user: {
                     show: false,
                 },
@@ -197,7 +137,7 @@ export default {
                     type: 'user',
                     name: '小笨',
                     desc: '优先处理日构建事务',
-                    online: true
+                    online: false
                 },
                 {
                     key: 3,
@@ -235,7 +175,9 @@ export default {
         handleSelect(key) {
             this.controlInfo.selectId = key
         },
-
+        openAddList() {
+            this.controlInfo.showAddList = true;
+        }
     }
 
 }
