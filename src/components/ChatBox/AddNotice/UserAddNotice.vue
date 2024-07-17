@@ -98,7 +98,9 @@ export default {
     background-color: var(--el-bg-color-page);
 
     .add-notice-title {
+        height: 65px;
         width: 100%;
+        margin-top: 10px;
 
         .add-notice-title-content {
             display: flex;

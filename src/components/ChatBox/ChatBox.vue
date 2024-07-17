@@ -1,14 +1,17 @@
 <template>
     <div class="chatbox">
         <el-container>
-            <el-aside style="overflow: visible;">
+            <el-aside style="overflow: visible; width: 70px;">
+                <SideBar />
+            </el-aside>
+            <el-aside style="overflow: visible; width: 250px;">
                 <FriendList />
             </el-aside>
             <el-main style="padding: 0;">
                 <!-- <UserChatContainer /> -->
                 <!-- <GroupChatContainer /> -->
-                <!-- <UserAddNotice /> -->
-                <GroupAddNotice />
+                <UserAddNotice />
+                <!-- <GroupAddNotice /> -->
             </el-main>
         </el-container>
         <!-- <AddFriend /> -->
@@ -24,11 +27,13 @@ import GroupChatContainer from "./UserChat/GroupChat.vue";
 import AddFriend from "./AddFriend/AddFriend.vue";
 import UserAddNotice from "./AddNotice/UserAddNotice.vue";
 import GroupAddNotice from "./AddNotice/GroupAddNotice.vue";
+import SideBar from "./SideBar/SideBar.vue";
 
 
 export default {
     name: 'ChatBox',
     components: {
+        SideBar,
         FriendList,
         UserChatContainer,
         GroupChatContainer,

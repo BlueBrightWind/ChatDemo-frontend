@@ -99,6 +99,8 @@ export default {
 
     .add-notice-title {
         width: 100%;
+        height: 65px;
+        margin-top: 10px;
 
         .add-notice-title-content {
             display: flex;

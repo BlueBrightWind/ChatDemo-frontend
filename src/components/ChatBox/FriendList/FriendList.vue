@@ -233,9 +233,10 @@ export default {
 
 <style lang="scss" scoped>
 .friend-container {
-    width: 300px;
+    width: 100%;
     height: 100%;
     border-right: 1px solid var(--el-border-color-extra-light);
+    border-left: 1px solid var(--el-border-color-extra-light);
 
     .search-container {
         margin-top: 10px;
@@ -333,32 +334,32 @@ export default {
     }
 
     .friendlist-container {
-        padding: 12px;
+        padding: 0;
         padding-right: 0;
 
         .friendlist-container-inner {
-            padding-right: 12px;
+            padding-right: 0px;
 
             .friend {
                 width: 100%;
-                height: 65px;
-                border-radius: 5px;
+                height: 60px;
                 display: flex;
                 align-items: center;
                 user-select: none;
-                padding-top: 7px;
-                padding-bottom: 7px;
+                padding-top: 8px;
+                padding-bottom: 8px;
 
                 .friend-avatar {
-                    width: 65px;
-                    height: 65px;
+                    width: 60px;
+                    height: 60px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
 
                 .friend-info {
-                    width: calc(100% - 65px - 80px);
+                    flex: 1;
+                    width: 0;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
@@ -421,6 +422,7 @@ export default {
                 .message-time {
                     width: 80px;
                     height: 100%;
+                    padding-right: 10px;
                     color: var(--el-color-info);
                     font-size: 11px;
                     display: flex;
@@ -435,7 +437,7 @@ export default {
             }
 
             .friend.selected {
-                background-color: var(--el-color-primary-light-8);
+                background-color: var(--el-color-info-light-8);
             }
         }
     }
