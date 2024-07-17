@@ -5,6 +5,7 @@
                 <SideBar />
             </el-aside>
             <el-aside style="overflow: visible; width: 250px;">
+                <!-- <MessageList /> -->
                 <FriendList />
             </el-aside>
             <el-main style="padding: 0;">
@@ -22,6 +23,7 @@
 
 <script>
 import FriendList from "./FriendList/FriendList.vue";
+import MessageList from "./FriendList/MessageList.vue";
 import UserChatContainer from "./UserChat/UserChat.vue";
 import GroupChatContainer from "./UserChat/GroupChat.vue";
 import AddFriend from "./AddFriend/AddFriend.vue";
@@ -35,6 +37,7 @@ export default {
     components: {
         SideBar,
         FriendList,
+        MessageList,
         UserChatContainer,
         GroupChatContainer,
         AddFriend,

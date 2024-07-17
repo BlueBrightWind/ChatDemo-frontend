@@ -1,0 +1,419 @@
+<template>
+    <el-container class="message-container">
+        <el-header class="search-container">
+            <el-container style="width: 100%; height: 100%;">
+                <el-aside class="search-input">
+                    <el-input v-model="inputValue" placeholder="搜索" :prefix-icon="Search" />
+                </el-aside>
+                <el-main class="search-add-message">
+                    <CirclePlusFilled />
+                    <div class="add-message-list">
+                        <div class="list-item">
+                            <div class="list-item-content">
+                                <el-icon class="list-item-icon">
+                                    <ChatDotSquare />
+                                </el-icon>
+                                发起群聊
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-content">
+                                <el-icon class="list-item-icon">
+                                    <User />
+                                </el-icon>
+                                添加好友/群
+                            </div>
+                        </div>
+                    </div>
+                </el-main>
+            </el-container>
+        </el-header>
+        <el-main class="messagelist-container">
+            <el-scrollbar class="messagelist-container-inner">
+                <!-- 好友信息开始 -->
+                <div class="message selected">
+                    <div class="message-avatar">
+                        <el-avatar
+                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小明</el-avatar>
+                    </div>
+                    <div class="message-info">
+                        <div class="message-name">
+                            <div class="name-content">小明</div>
+                        </div>
+                        <div class="message-latest-message">
+                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                        </div>
+                    </div>
+                    <div class="message-time">
+                        <span>Today</span>
+                        <span>17:24</span>
+                    </div>
+                </div>
+                <!-- 好友信息结束 -->
+                <!-- 好友信息开始 -->
+                <div class="message">
+                    <div class="message-avatar">
+                        <el-avatar
+                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
+                    </div>
+                    <div class="message-info">
+                        <div class="message-name">
+                            <div class="name-content">小笨</div>
+                        </div>
+                        <div class="message-latest-message">
+                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                        </div>
+                    </div>
+                    <div class="message-time">
+                        <span>2020-12-24</span>
+                        <span>14:32</span>
+                    </div>
+                </div>
+                <!-- 好友信息结束 -->
+                <!-- 测试开始 -->
+                <div class="message">
+                    <div class="message-avatar">
+                        <el-avatar
+                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
+                    </div>
+                    <div class="message-info">
+                        <div class="message-name">
+                            <div class="name-content">小笨</div>
+                        </div>
+                        <div class="message-latest-message">
+                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                        </div>
+                    </div>
+                    <div class="message-time">
+                        <span>2020-12-24</span>
+                        <span>14:32</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="message-avatar">
+                        <el-avatar
+                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
+                    </div>
+                    <div class="message-info">
+                        <div class="message-name">
+                            <div class="name-content">小笨</div>
+                        </div>
+                        <div class="message-latest-message">
+                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                        </div>
+                    </div>
+                    <div class="message-time">
+                        <span>2020-12-24</span>
+                        <span>14:32</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="message-avatar">
+                        <el-avatar
+                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
+                    </div>
+                    <div class="message-info">
+                        <div class="message-name">
+                            <div class="name-content">小笨</div>
+                        </div>
+                        <div class="message-latest-message">
+                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                        </div>
+                    </div>
+                    <div class="message-time">
+                        <span>2020-12-24</span>
+                        <span>14:32</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="message-avatar">
+                        <el-avatar
+                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
+                    </div>
+                    <div class="message-info">
+                        <div class="message-name">
+                            <div class="name-content">小笨</div>
+                        </div>
+                        <div class="message-latest-message">
+                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                        </div>
+                    </div>
+                    <div class="message-time">
+                        <span>2020-12-24</span>
+                        <span>14:32</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="message-avatar">
+                        <el-avatar
+                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
+                    </div>
+                    <div class="message-info">
+                        <div class="message-name">
+                            <div class="name-content">小笨</div>
+                        </div>
+                        <div class="message-latest-message">
+                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                        </div>
+                    </div>
+                    <div class="message-time">
+                        <span>2020-12-24</span>
+                        <span>14:32</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="message-avatar">
+                        <el-avatar
+                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
+                    </div>
+                    <div class="message-info">
+                        <div class="message-name">
+                            <div class="name-content">小笨</div>
+                        </div>
+                        <div class="message-latest-message">
+                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                        </div>
+                    </div>
+                    <div class="message-time">
+                        <span>2020-12-24</span>
+                        <span>14:32</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="message-avatar">
+                        <el-avatar
+                            style="width: 75%; height: 75%; background-color: var(--color-dark-2);">小笨</el-avatar>
+                    </div>
+                    <div class="message-info">
+                        <div class="message-name">
+                            <div class="name-content">小笨</div>
+                        </div>
+                        <div class="message-latest-message">
+                            <span class="message-latest-message-item">优先处理日构建事务</span>
+                        </div>
+                    </div>
+                    <div class="message-time">
+                        <span>2020-12-24</span>
+                        <span>14:32</span>
+                    </div>
+                </div>
+                <!-- 测试结束 -->
+            </el-scrollbar>
+
+        </el-main>
+    </el-container>
+</template>
+
+<script setup>
+import { Search } from '@element-plus/icons-vue'
+import { CirclePlusFilled, User, ChatDotSquare } from '@element-plus/icons-vue'
+</script>
+
+<script>
+export default {
+    name: 'messageList',
+    data() {
+        return {
+            inputValue: ''
+        }
+    }
+
+}
+</script>
+
+
+<style lang="scss" scoped>
+.message-container {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid var(--el-border-color-extra-light);
+    border-left: 1px solid var(--el-border-color-extra-light);
+
+    .search-container {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+
+        .search-input {
+            width: 85%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-input :deep(.el-input__wrapper) {
+            border-radius: 999999px;
+            height: 27px;
+        }
+
+        .search-add-message {
+            width: 15%;
+            height: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding: 0;
+            position: relative;
+            overflow: visible;
+
+            :deep(svg) {
+                width: 70%;
+                height: 70%;
+                color: var(--color-base);
+            }
+
+            :deep(svg:hover) {
+                color: var(--color-light-2)
+            }
+
+            .add-message-list {
+                width: 120px;
+                position: absolute;
+                left: 10px;
+                top: calc(100% - 15px);
+                z-index: 2;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--el-bg-color);
+                user-select: none;
+                box-shadow: 0 0 2px var(--el-border-color-light);
+
+                .list-item {
+                    padding: 5px;
+                    display: flex;
+
+                    .list-item-content {
+                        width: 100%;
+                        height: 20px;
+                        padding: 5px;
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        font-size: 12px;
+                        border-radius: 5px;
+                        background-color: var(--el-bg-color);
+
+                        .list-item-icon {
+                            width: 20px;
+                            height: 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 10px;
+
+                            :deep(svg) {
+                                width: 100%;
+                                height: 100%;
+                                color: var(--el-text-color-primary);
+                            }
+                        }
+                    }
+
+                    .list-item-content:hover {
+                        background-color: var(--el-color-info-light-9);
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .messagelist-container {
+        padding: 0;
+        padding-right: 0;
+
+        .messagelist-container-inner {
+            padding-right: 0px;
+
+            .message {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                user-select: none;
+                padding-top: 8px;
+                padding-bottom: 8px;
+
+                .message-avatar {
+                    width: 60px;
+                    height: 60px;
+                    padding-left: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .message-info {
+                    flex: 1;
+                    width: 0;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .message-name {
+                        width: 100%;
+                        height: 35%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .name-content {
+                            flex: 1;
+                            height: 100%;
+                            display: flex;
+                            justify-content: left;
+                            align-items: center;
+                            line-height: 100%;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .message-latest-message {
+                        width: 100%;
+                        height: 30%;
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+
+                        .message-latest-message-item {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 11px;
+                            color: var(--el-color-info);
+                        }
+                    }
+                }
+
+                .message-time {
+                    width: 80px;
+                    height: 100%;
+                    padding-right: 10px;
+                    color: var(--el-color-info);
+                    font-size: 11px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .message:hover {
+                background-color: var(--el-color-info-light-9);
+            }
+
+            .message.selected {
+                background-color: var(--el-color-info-light-8);
+            }
+        }
+    }
+
+}
+</style>

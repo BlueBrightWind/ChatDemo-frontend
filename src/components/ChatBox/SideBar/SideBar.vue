@@ -4,8 +4,8 @@
             <el-avatar class="avatar-item" src="https://avatars.githubusercontent.com/u/38139389?v=4"></el-avatar>
         </div>
         <div class="sidebar-btn-content">
-            <el-button :icon="Comment" class="btn-item"></el-button>
-            <el-button :icon="UserFilled" class="btn-item select"></el-button>
+            <el-button :icon="Comment" class="btn-item selected"></el-button>
+            <el-button :icon="UserFilled" class="btn-item"></el-button>
         </div>
         <div class="sidebar-setting-content">
             <el-button :icon="Tools" class="setting-btn-item"></el-button>
@@ -68,15 +68,15 @@ export default {
             margin-top: 10px;
             border: 0;
             outline: none;
-            color:var(--el-text-color-regular);
+            color: var(--el-text-color-regular);
         }
 
         .btn-item:hover {
             background-color: var(--el-color-info-light-8);
-            color:var(--el-text-color-regular);
+            color: var(--el-text-color-regular);
         }
 
-        .btn-item.select {
+        .btn-item.selected {
             background-color: var(--el-color-info-light-8);
             color: var(--el-button-hover-text-color);
         }
@@ -98,12 +98,12 @@ export default {
             margin-top: 10px;
             border: 0;
             outline: none;
-            color:var(--el-text-color-regular);
+            color: var(--el-text-color-regular);
         }
 
         .setting-btn-item:hover {
             background-color: var(--el-color-info-light-8);
-            color:var(--el-text-color-regular);
+            color: var(--el-text-color-regular);
         }
     }
 }
