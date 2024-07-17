@@ -9,8 +9,8 @@
             </el-aside>
             <el-main style="padding: 0;">
                 <!-- <UserChatContainer /> -->
-                <!-- <GroupChatContainer /> -->
-                <UserAddNotice />
+                <GroupChatContainer />
+                <!-- <UserAddNotice /> -->
                 <!-- <GroupAddNotice /> -->
             </el-main>
         </el-container>
@@ -46,7 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 .chatbox {
-    width: 900px;
+    width: 1200px;
     height: 700px;
     box-shadow: 0 0 5px var(--el-color-info-light-3);
     position: absolute;

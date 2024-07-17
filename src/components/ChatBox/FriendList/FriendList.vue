@@ -256,7 +256,7 @@ export default {
 
         .search-input :deep(.el-input__wrapper) {
             border-radius: 999999px;
-            height: 35px;
+            height: 27px;
         }
 
         .search-add-friend {

@@ -66,6 +66,90 @@
                         <div class="notice-process-result-item">已拒绝</div>
                     </div>
                 </div>
+                <div class="notice-item">
+                    <div class="notice-avatar">
+                        <el-avatar style="background-color: var(--color-dark-2);">小明</el-avatar>
+                    </div>
+                    <div class="notice-info">
+                        <div class="friend-name">小明</div>
+                        <div class="friend-remark">你好，我是小明</div>
+                    </div>
+                    <div class="notice-process-result">
+                        <div class="notice-process-result-item">已拒绝</div>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-avatar">
+                        <el-avatar style="background-color: var(--color-dark-2);">小明</el-avatar>
+                    </div>
+                    <div class="notice-info">
+                        <div class="friend-name">小明</div>
+                        <div class="friend-remark">你好，我是小明</div>
+                    </div>
+                    <div class="notice-process-result">
+                        <div class="notice-process-result-item">已拒绝</div>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-avatar">
+                        <el-avatar style="background-color: var(--color-dark-2);">小明</el-avatar>
+                    </div>
+                    <div class="notice-info">
+                        <div class="friend-name">小明</div>
+                        <div class="friend-remark">你好，我是小明</div>
+                    </div>
+                    <div class="notice-process-result">
+                        <div class="notice-process-result-item">已拒绝</div>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-avatar">
+                        <el-avatar style="background-color: var(--color-dark-2);">小明</el-avatar>
+                    </div>
+                    <div class="notice-info">
+                        <div class="friend-name">小明</div>
+                        <div class="friend-remark">你好，我是小明</div>
+                    </div>
+                    <div class="notice-process-result">
+                        <div class="notice-process-result-item">已拒绝</div>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-avatar">
+                        <el-avatar style="background-color: var(--color-dark-2);">小明</el-avatar>
+                    </div>
+                    <div class="notice-info">
+                        <div class="friend-name">小明</div>
+                        <div class="friend-remark">你好，我是小明</div>
+                    </div>
+                    <div class="notice-process-result">
+                        <div class="notice-process-result-item">已拒绝</div>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-avatar">
+                        <el-avatar style="background-color: var(--color-dark-2);">小明</el-avatar>
+                    </div>
+                    <div class="notice-info">
+                        <div class="friend-name">小明</div>
+                        <div class="friend-remark">你好，我是小明</div>
+                    </div>
+                    <div class="notice-process-result">
+                        <div class="notice-process-result-item">已拒绝</div>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-avatar">
+                        <el-avatar style="background-color: var(--color-dark-2);">小明</el-avatar>
+                    </div>
+                    <div class="notice-info">
+                        <div class="friend-name">小明</div>
+                        <div class="friend-remark">你好，我是小明</div>
+                    </div>
+                    <div class="notice-process-result">
+                        <div class="notice-process-result-item">已拒绝</div>
+                    </div>
+                </div>
                 <!-- 测试结束 -->
             </el-scrollbar>
         </el-main>
